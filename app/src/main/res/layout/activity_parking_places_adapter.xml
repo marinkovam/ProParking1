@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/parking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            tools:text="@tools:sample/first_names"/>
+
+        <TableRow
+            android:id="@+id/table"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_below="@+id/parking"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/first"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="30dp"
+                android:background="#FF0000"
+                android:textSize="40dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/second"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#00FF00"
+                android:textSize="40dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
+
+        </TableRow>
+        <Button
+            android:layout_toRightOf="@+id/table"
+            android:layout_marginLeft="130dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Резервирај" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
