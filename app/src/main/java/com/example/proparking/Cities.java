@@ -17,7 +17,7 @@ public class Cities extends AppCompatActivity {
     public static String username;
     RecyclerView mRecyclerView;
     MyAdapter mAdapter;
-    int image_id[] ={R.drawable.skopje, R.drawable.bitola, R.drawable.tetovo};
+    int image_id[] ={R.drawable.skopje, R.drawable.bitola, R.drawable.tetovo, R.drawable.veles};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class Cities extends AppCompatActivity {
         Intent intent = getIntent();
         username = intent.getStringExtra("username");
 
-        List<String> values = Arrays.asList("Скопје", "Битола", "Тетово" );
+        List<String> values = Arrays.asList("Скопје", "Битола", "Тетово", "Велес" );
         mRecyclerView = (RecyclerView) findViewById(R.id.list);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));

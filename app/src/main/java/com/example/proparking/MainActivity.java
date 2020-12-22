@@ -51,8 +51,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Пополнете ги сите полиња!", Toast.LENGTH_SHORT).show();
         } else {
             DBOpenHelper myDatabase=new DBOpenHelper(MainActivity.this);
-            myDatabase.insertUserDetails(first_name.getText().toString().trim(), last_name.getText().toString().trim(),
-                    username1.getText().toString().trim(), password1.getText().toString().trim());
+            myDatabase.insertUserDetails(first_name.getText().toString().trim(), last_name.getText().toString().trim(), username1.getText().toString().trim(), password1.getText().toString().trim());
             Toast.makeText(this, "Успешна регистрација", Toast.LENGTH_SHORT).show();
             //first_name.setText("");
         }
@@ -66,8 +65,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else{
             DBOpenHelper myDatabase=new DBOpenHelper(MainActivity.this);
-            if(myDatabase.checkUser(username.getText().toString().trim()
-                    , password.getText().toString().trim())) {
+            if(myDatabase.checkUser(username.getText().toString().trim(), password.getText().toString().trim())) {
                 Intent intent = new Intent(this, Cities.class);
                 intent.putExtra("user", username.toString());
                 startActivity(intent);
