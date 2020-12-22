@@ -18,8 +18,6 @@ public class DBOpenHelper extends SQLiteOpenHelper{
     private static final String KEY_ID = "id";
     private static final String KEY_FIRST_NAME = "first_name";
     private static final String KEY_LAST_NAME = "last_name";
-    private static final String KEY_REG = "registration";
-    private static final String KEY_NUMBER = "number";
     private static final String KEY_USERNAME = "username";
     private static final String KEY_PASSWORD = "password";
 
@@ -51,8 +49,6 @@ public class DBOpenHelper extends SQLiteOpenHelper{
         String CREATE_TABLE1 = "CREATE TABLE " + TABLE_Users + "("
                 + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + KEY_FIRST_NAME + " TEXT,"
                 + KEY_LAST_NAME + " TEXT,"
-                + KEY_REG + " TEXT,"
-                + KEY_NUMBER + " TEXT,"
                 + KEY_USERNAME + " TEXT,"
                 + KEY_PASSWORD + " TEXT"+")";
         db.execSQL(CREATE_TABLE1);
@@ -91,7 +87,7 @@ public class DBOpenHelper extends SQLiteOpenHelper{
         // Create tables again
         onCreate(db);
     }
-    void insertUserDetails(String first_name, String last_name, String registration, String number, String username, String password){
+    void insertUserDetails(String first_name, String last_name, String username, String password){
         //Get the Data Repository in write mode
         SQLiteDatabase db = this.getWritableDatabase();
         //Create a new map of values, where column names are the keys
@@ -99,8 +95,6 @@ public class DBOpenHelper extends SQLiteOpenHelper{
         ContentValues cValues = new ContentValues();
         cValues.put(KEY_FIRST_NAME, first_name);
         cValues.put(KEY_LAST_NAME, last_name);
-        cValues.put(KEY_REG, registration);
-        cValues.put(KEY_NUMBER, number);
         cValues.put(KEY_USERNAME, username);
         cValues.put(KEY_PASSWORD, password);
         // Insert the new row, returning the primary key value of the new row

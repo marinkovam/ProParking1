@@ -44,18 +44,14 @@ public class MainActivity extends AppCompatActivity {
     public void database_input(View view){
         first_name=(EditText) findViewById(R.id.first_name);
         last_name=(EditText) findViewById(R.id.last_name);
-        registration=(EditText) findViewById(R.id.registration);
-        number=(EditText) findViewById(R.id.number);
+
         username1=(EditText) findViewById(R.id.username1);
         password1=(EditText) findViewById(R.id.pass);
-        if (first_name.getText().toString().trim().length() == 0 || last_name.getText().toString().trim().length() == 0 ||
-                registration.getText().toString().trim().length() == 0 || number.getText().toString().trim().length() == 0
-                || username1.getText().toString().trim().length() == 0 || password1.getText().toString().trim().length() == 0) {
+        if (first_name.getText().toString().trim().length() == 0 || last_name.getText().toString().trim().length() == 0 || username1.getText().toString().trim().length() == 0 || password1.getText().toString().trim().length() == 0) {
             Toast.makeText(this, "Пополнете ги сите полиња!", Toast.LENGTH_SHORT).show();
         } else {
             DBOpenHelper myDatabase=new DBOpenHelper(MainActivity.this);
             myDatabase.insertUserDetails(first_name.getText().toString().trim(), last_name.getText().toString().trim(),
-                    registration.getText().toString().trim(), number.getText().toString().trim(),
                     username1.getText().toString().trim(), password1.getText().toString().trim());
             Toast.makeText(this, "Успешна регистрација", Toast.LENGTH_SHORT).show();
             //first_name.setText("");
