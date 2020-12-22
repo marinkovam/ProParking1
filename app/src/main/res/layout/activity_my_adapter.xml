@@ -22,7 +22,7 @@
             android:background="?android:selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
-            android:textColor="#800000"
+
             android:textSize="24sp"
             tools:text="@tools:sample/first_names"/>
 

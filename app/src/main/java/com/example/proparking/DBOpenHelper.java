@@ -63,20 +63,20 @@ public class DBOpenHelper extends SQLiteOpenHelper{
                 CITY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + CITY + " TEXT,"
                 + CITY_IMAGE + " INTEGER"+")";
         db.execSQL(CREATE_TABLE3);
-        db.execSQL("create table " + TABLE_Parking +"(id INTEGER PRIMARY KEY AUTOINCREMENT, parking_name VARCHAR, city_name VARCHAR, free VARCHAR, taken INTEGER)");
-        ContentValues content = new ContentValues();
 
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('26ти Јули', 'Скопје', '20','10')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Беко-Центар', 'Скопје', '10','5')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Парк МКЦ', 'Скопје', '15','7')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Бит Пазар', 'Скопје', '20','13')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Широк Сокак', 'Битола', '28','18')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Центар', 'Битола', '43','21')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Центар', 'Тетово', '12','32')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('PalmaMall', 'Тетово', '23','25')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Воена болница', 'Скопје', '17','25')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Центар', 'Велес', '15','4')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Автобуска станица', 'Велес', '15','4')");
+        db.execSQL("create table " + TABLE_Parking +"(id INTEGER PRIMARY KEY AUTOINCREMENT, parking_name VARCHAR, city_name VARCHAR, free VARCHAR, taken INTEGER, latitude VARCHAR, longitude VARCHAR)");
+        ContentValues content = new ContentValues();
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('26ти Јули', 'Скопје', '20','10','41.989308','21.432300')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Беко-Центар', 'Скопје', '10','5','41.993260','21.428601')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Парк МКЦ', 'Скопје', '15','7','41.996262','21.442586')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Бит Пазар', 'Скопје', '20','13','42.000046','21.439192')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Широк Сокак', 'Битола', '28','18','41.028967','21.336041')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Национален музеј', 'Битола', '43','21','41.023664','21.336199')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Центар', 'Тетово', '12','32','42.006494','20.966111')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('PalmaMall', 'Тетово', '23','25','42.004326','20.989661')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Воена болница', 'Скопје', '17','25','42.006302','21.402672')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Центар', 'Велес', '15','4','41.717543','21.780445')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Костурница', 'Велес', '15','4','41.723105','21.788184')");
 
     }
     @Override
@@ -165,6 +165,8 @@ public class DBOpenHelper extends SQLiteOpenHelper{
         cValues.put(CITY_IMAGE, R.drawable.bitola);
         cValues.put(CITY, "Тетово");
         cValues.put(CITY_IMAGE, R.drawable.tetovo);
+        cValues.put(CITY, "Велес");
+        cValues.put(CITY_IMAGE, R.drawable.veles);
         // Insert the new row, returning the primary key value of the new row
         long newRowId = db.insert(TABLE_Reservation, null, cValues);
         db.close();
@@ -204,9 +206,11 @@ public class DBOpenHelper extends SQLiteOpenHelper{
             String parkingName = cursor.getString(1);
             String free=cursor.getString(3);
             String taken=cursor.getString(4);
+            String latitude=cursor.getString(5);
+            String longitude=cursor.getString(6);
 
             Parking_places parking =
-                    new Parking_places(parkingId, parkingName, city, free, taken);
+                    new Parking_places(parkingId, parkingName, city, free, taken,latitude,longitude);
             returnList.add(parking);
         }
         cursor.close();
