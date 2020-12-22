@@ -19,7 +19,7 @@
             android:background="?android:selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
-            android:textColor="@android:color/black"
+            android:textColor="#800000"
             android:textSize="24sp"
             tools:text="@tools:sample/first_names"/>
 
@@ -35,17 +35,16 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginRight="30dp"
-                android:background="#FF0000"
+                android:background="#C21807"
                 android:textSize="40dp"
                 android:layout_gravity="center"
-                android:textAlignment="center"
                 android:textColor="@android:color/white" />
 
             <TextView
                 android:id="@+id/second"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="#00FF00"
+                android:background="#708238"
                 android:textSize="40dp"
                 android:layout_gravity="center"
                 android:textAlignment="center"

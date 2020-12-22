@@ -67,14 +67,16 @@ public class DBOpenHelper extends SQLiteOpenHelper{
         ContentValues content = new ContentValues();
 
         db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('26ти Јули', 'Скопје', '20','10')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Центар', 'Скопје', '10','5')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('City Mall', 'Скопје', '15','7')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Беко-Центар', 'Скопје', '10','5')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Парк МКЦ', 'Скопје', '15','7')");
         db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Бит Пазар', 'Скопје', '20','13')");
         db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Широк Сокак', 'Битола', '28','18')");
         db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Центар', 'Битола', '43','21')");
         db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Центар', 'Тетово', '12','32')");
         db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('PalmaMall', 'Тетово', '23','25')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Музеј на современа уметност', 'Скопје', '17','25')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Воена болница', 'Скопје', '17','25')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Центар', 'Велес', '15','4')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken)" + "VALUES" + "('Автобуска станица', 'Велес', '15','4')");
 
     }
     @Override

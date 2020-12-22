@@ -10,18 +10,19 @@
     card_view:cardElevation="8dp">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="390dp"
         android:orientation="vertical">
         <TextView
             android:id="@+id/name"
+            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:background="?android:selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
-            android:textColor="#FFBB86FC"
+            android:textColor="#800000"
             android:textSize="24sp"
             tools:text="@tools:sample/first_names"/>
 
@@ -31,11 +32,14 @@
             android:layout_height="319dp"
             android:layout_centerInParent="true"
             android:scaleType="fitCenter"
+            android:layout_gravity="center"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
         <Button
             android:id="@+id/but"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Резервација"/>
+            android:layout_gravity="center"
+            android:text="Резервација" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -8,12 +8,13 @@
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Изберете датум и време"
-        android:textSize="25dp"
+        android:text="Избор на датум и време"
+        android:textSize="20dp"
+        android:layout_centerHorizontal = "true"
         android:layout_marginBottom="20dp"/>
     <DatePicker
         android:id="@+id/datePicker"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="1dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -24,17 +25,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/datePicker"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginTop="10dp"/>
 
     <Button
         android:id="@+id/reserve"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/spinner"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="10dp"
-        android:layout_centerInParent="true"
+        android:layout_marginTop="450dp"
+        android:layout_marginBottom="5dp"
         android:text="Резервирај" />
 
 </RelativeLayout>
