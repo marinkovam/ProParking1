@@ -10,10 +10,14 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.view.Menu;
+import android.view.MenuInflater;
 
 public class MainActivity extends AppCompatActivity {
     SQLiteDatabase db;
@@ -21,8 +25,6 @@ public class MainActivity extends AppCompatActivity {
     EditText password;
     EditText first_name;
     EditText last_name;
-    EditText registration;
-    EditText number;
     EditText username1;
     EditText password1;
     Button button;
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
     public void database_input(View view){
         first_name=(EditText) findViewById(R.id.first_name);
         last_name=(EditText) findViewById(R.id.last_name);
@@ -75,4 +78,5 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
 }

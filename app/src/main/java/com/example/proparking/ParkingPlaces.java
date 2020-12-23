@@ -4,9 +4,12 @@ import android.content.Intent;
         import android.database.Cursor;
         import android.database.sqlite.SQLiteDatabase;
         import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 
-        import androidx.appcompat.app.AppCompatActivity;
-        import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.DefaultItemAnimator;
         import androidx.recyclerview.widget.LinearLayoutManager;
         import androidx.recyclerview.widget.RecyclerView;
 
@@ -28,6 +31,8 @@ public class ParkingPlaces  extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parking_places);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         db = new DBOpenHelper(getApplicationContext());
         sql = db.getWritableDatabase();
@@ -51,5 +56,10 @@ public class ParkingPlaces  extends AppCompatActivity {
     private List<Parking_places> getAllParkingPlaces() {
         DBOpenHelper handler = new DBOpenHelper(ParkingPlaces.this);
         return handler.getAllParkingPlaces(city);
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.example_menu, menu);
+        return true;
     }
 }

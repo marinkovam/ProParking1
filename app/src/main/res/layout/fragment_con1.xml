@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".ConFragment1">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
     <ImageView
         android:id="@+id/place"
         android:layout_width="match_parent"
@@ -21,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#800000"
-        android:text="Успешно резервиравте!"
+        android:text="Успешна резервација!"
         android:textSize="30dp"/>
 
     <Button

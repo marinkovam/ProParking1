@@ -9,8 +9,12 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/parking_places"
         android:scrollbars="vertical"
+        android:layout_marginTop="55dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
 
 
 </RelativeLayout>

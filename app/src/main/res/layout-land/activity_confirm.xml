@@ -25,5 +25,8 @@
             android:text="Ви благодариме за користење на нашите услуги! "
             android:textColor="#451f1e"
             android:textSize="25dp" />
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
     </LinearLayout>
 </ScrollView>

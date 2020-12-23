@@ -3,7 +3,9 @@ import android.app.Fragment;
         import android.content.Intent;
         import android.os.Bundle;
         import android.view.LayoutInflater;
-        import android.view.View;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.View;
         import android.view.ViewGroup;
         import android.widget.ArrayAdapter;
         import android.widget.Button;
@@ -12,8 +14,9 @@ import android.app.Fragment;
         import android.widget.TimePicker;
 
         import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
-        import com.example.proparking.Parking_places;
+import com.example.proparking.Parking_places;
 
         import java.util.ArrayList;
         import java.util.List;
@@ -36,6 +39,8 @@ public class ReservationForm extends AppCompatActivity {
         Fragment fragment1 = getFragmentManager().findFragmentById(R.id.fragment1);
         Fragment fragment2 = getFragmentManager().findFragmentById(R.id.fragment1);
         Intent intent = getIntent();
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         city = intent.getStringExtra("city");
         username = Cities.getUsername();
 
@@ -65,6 +70,11 @@ public class ReservationForm extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.example_menu, menu);
+        return true;
     }
 
     // private List<Parking_places> getAllParkingPlaces() {

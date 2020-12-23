@@ -37,6 +37,7 @@
             android:layout_gravity="center"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
+
         <Button
             android:id="@+id/but"
             android:layout_width="wrap_content"

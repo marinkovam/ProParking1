@@ -37,7 +37,7 @@ public class ConFragment1 extends Fragment {
         if (getResources().getConfiguration().orientation ==
                 Configuration.ORIENTATION_LANDSCAPE) {
             // show in same activity
-            ConFragment2 frag = (ConFragment2) getFragmentManager().findFragmentById(R.id.fragment2);
+            ConFragment2 frag = (ConFragment2) getFragmentManager().findFragmentById(R.id.fragment1);
 
         } else {
             Intent intent = new Intent(getActivity(), MapsActivity.class);

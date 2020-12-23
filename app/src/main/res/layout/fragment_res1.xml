@@ -39,4 +39,8 @@
         android:layout_below="@+id/spinner"
         android:text="Резервирај" />
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
 </RelativeLayout>
