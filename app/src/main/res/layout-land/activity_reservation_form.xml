@@ -13,18 +13,21 @@
 
         <ImageView
             android:id="@+id/slik1"
-            android:layout_width="400dp"
-            android:layout_height="100dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_marginTop="2dp"
             android:src="@drawable/kolichka" />
         <fragment
             android:id="@+id/fragment1"
             android:name="com.example.proparking.ResFragment1"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="450dp"
+            android:layout_height="500dp"
             tools:layout="@layout/fragment_res1" />
-
-
-
+        <ImageView
+            android:id="@+id/slik2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/kolichka" />
     </LinearLayout>
 </ScrollView>
