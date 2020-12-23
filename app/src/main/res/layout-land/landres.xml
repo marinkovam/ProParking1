@@ -14,14 +14,14 @@
         <fragment
             android:id="@+id/fragment2"
             android:name="com.example.proparking.ResFragment2"
-            android:layout_width="301dp"
-            android:layout_height="324dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             tools:layout="@layout/fragment_res2" />
         <fragment
             android:id="@+id/fragment1"
             android:name="com.example.proparking.ResFragment1"
-            android:layout_width="346dp"
-            android:layout_height="363dp"
+            android:layout_width="350dp"
+            android:layout_height="300dp"
             tools:layout="@layout/fragment_res1" />
 
 
