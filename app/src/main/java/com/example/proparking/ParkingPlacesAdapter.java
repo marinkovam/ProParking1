@@ -45,8 +45,10 @@ public class ParkingPlacesAdapter extends RecyclerView.Adapter<ParkingPlacesAdap
                 Intent intent = new Intent(mContext, Confirm.class);
                 intent.putExtra("parking", entry.getParkingName());
                 intent.putExtra("city", entry.getCityName());
+                intent.putExtra("latitude", entry.getLatitude());
+                intent.putExtra("longitude", entry.getLongitude());
                 mContext.startActivity(intent);
-                mDatabase.insertReservationDetails(username, city, date, time, entry.getParkingName());
+                // mDatabase.insertReservationDetails(username, city, date, time, entry.getParkingName());
             }
         });
     }

@@ -43,6 +43,5 @@ public class Reservation {
     public void setParkingName(String parking_name) {
         this.parking_name = parking_name;
     }
-
 }
 
