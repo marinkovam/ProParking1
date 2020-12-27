@@ -217,4 +217,39 @@ public class DBOpenHelper extends SQLiteOpenHelper{
         db.close();
         return returnList;
     }
+
+   ///funkcii za myreservations sho ne gi upotrebuvam :)
+
+    // public boolean MyThreeReservations(String username) { // 3 rezervacii na eden korisnik
+     //   SQLiteDatabase database = this.getReadableDatabase();
+       // int count = 0;
+        //Cursor c1 = database.rawQuery("SELECT * FROM Reservation WHERE username = '" + username + "'", null);
+        //while (c1.moveToNext()) {
+         //   String date = c1.getString(3);
+          //  String time = c1.getString(4);
+           // if (isActive(date, time)) { //ako se aktivni gi vkluchuvam
+            //    count++;
+            //}
+        //}
+        ///c1.close();
+       /// if (count < 3) {
+         ///   return false;
+        ///} else {
+          ///  return true;
+       /// }
+    ///}
+    ///public boolean isActive(String date, String time) {
+       // String[] date = date.split("/");
+        //int Den = Integer.parseInt(date[0]);
+        ///int Mesec = Integer.parseInt(date[1]);
+       /// int Godina = Integer.parseInt(date[2]);
+        ///String time = time.substring(0, 2);
+        ///int time = Integer.parseInt(time);
+
+       /// Calendar rightNow = Calendar.getInstance();
+        ///int day = rightNow.get(Calendar.DAY_OF_MONTH);
+        ///int month = rightNow.get(Calendar.MONTH) + 1;
+        ///int year = rightNow.get(Calendar.YEAR);
+        ///int hour = rightNow.get(Calendar.HOUR_OF_DAY);
+
 }
