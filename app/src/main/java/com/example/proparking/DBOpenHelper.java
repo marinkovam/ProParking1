@@ -10,7 +10,7 @@ import java.util.List;
 
 
 public class DBOpenHelper extends SQLiteOpenHelper{
-    private static final int DB_VERSION = 4;
+    private static final int DB_VERSION = 5;
 
     //tabelata za users
     private static final String DB_NAME = "Users";
@@ -66,17 +66,17 @@ public class DBOpenHelper extends SQLiteOpenHelper{
 
         db.execSQL("create table " + TABLE_Parking +"(id INTEGER PRIMARY KEY AUTOINCREMENT, parking_name VARCHAR, city_name VARCHAR, free VARCHAR, taken INTEGER, latitude VARCHAR, longitude VARCHAR)");
         ContentValues content = new ContentValues();
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('26ти Јули', 'Скопје', '20','10','41.989308','21.432300')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('Беко-Центар', 'Скопје', '10','5','41.993260','21.428601')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('Парк МКЦ', 'Скопје', '15','7','41.996262','21.442586')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('Бит Пазар', 'Скопје', '20','13','42.000046','21.439192')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('Широк Сокак', 'Битола', '28','18','41.028967','21.336041')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('Национален музеј', 'Битола', '43','21','41.023664','21.336199')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('Центар', 'Тетово', '12','32','42.006494','20.966111')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('PalmaMall', 'Тетово', '23','25','42.004326','20.989661')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('Воена болница', 'Скопје', '17','25','42.006302','21.402672')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('Центар', 'Велес', '15','4','41.717543','21.780445')");
-        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('Костурница', 'Велес', '15','4','41.723105','21.788184')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('26ти Јули', 'Скопје', '30','0','41.989308','21.432300')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('Беко-Центар', 'Скопје', '45','0','41.993260','21.428601')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('Парк МКЦ', 'Скопје', '34','0','41.996262','21.442586')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('Бит Пазар', 'Скопје', '40','0','42.000046','21.439192')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('Широк Сокак', 'Битола', '25','0','41.028967','21.336041')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('Национален музеј', 'Битола', '43','20','41.023664','21.336199')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('Центар', 'Тетово', '12','0','42.006494','20.966111')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('PalmaMall', 'Тетово', '23','0','42.004326','20.989661')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('Воена болница', 'Скопје', '56','0','42.006302','21.402672')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('Центар', 'Велес', '26','0','41.717543','21.780445')");
+        db.execSQL("insert into " + TABLE_Parking +"(parking_name, city_name, free, taken,latitude,longitude)" + "VALUES" + "('Костурница', 'Велес', '15','0','41.723105','21.788184')");
 
     }
     @Override
